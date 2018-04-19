@@ -36,6 +36,8 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 elseif filereadable(expand("~/.config/nvim/vimrc.bundles")) " neovim
   source ~/.config/nvim/vimrc.bundles
+elseif filereadable(expand("~/.vimrc.custom")) "custom config
+  source ~/.vimrc.custom
 endif
 
 " ensure ftdetect et al work by including this after the bundle stuff
@@ -675,3 +677,7 @@ highlight clear SpellRare
 highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
+
+let g:ale_php_phpcs_standard = 'psr-2'
+colorscheme molokai
+let g:NERDTreeWinPos = "right"
