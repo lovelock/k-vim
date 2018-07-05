@@ -36,8 +36,6 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 elseif filereadable(expand("~/.config/nvim/vimrc.bundles")) " neovim
   source ~/.config/nvim/vimrc.bundles
-elseif filereadable(expand("~/.vimrc.custom")) "custom config
-  source ~/.vimrc.custom
 endif
 
 " ensure ftdetect et al work by including this after the bundle stuff
